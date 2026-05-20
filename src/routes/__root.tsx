@@ -69,18 +69,36 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-    ],
+  meta: [
+    { charSet: "utf-8" },
+    { name: "viewport", content: "width=device-width, initial-scale=1" },
+
+    { title: "Nodewave — AI Automation Systems for Local Businesses" },
+
+    {
+      name: "description",
+      content:
+        "Nodewave builds AI automation systems that capture leads, qualify prospects, send follow-ups and organize customer communication automatically.",
+    },
+
+    { name: "author", content: "Nodewave" },
+
+    {
+      property: "og:title",
+      content: "Nodewave — AI Automation Systems for Local Businesses",
+    },
+
+    {
+      property: "og:description",
+      content:
+        "Nodewave builds AI automation systems that capture leads, qualify prospects, send follow-ups and organize customer communication automatically.",
+    },
+
+    { property: "og:type", content: "website" },
+
+    { name: "twitter:card", content: "summary_large_image" },
+  ],
+})
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
