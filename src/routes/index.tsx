@@ -927,7 +927,7 @@ function ContactForm() {
     message: formData.get("message"),
   };
 
-  await fetch("https://mysaveplace.app.n8n.cloud/webhook/lead-form", {
+  await fetch("https://mysaveplace.app.n8n.cloud/webhook/ai-audit", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
