@@ -138,8 +138,9 @@ function Hero() {
           </p>
           <div className="mt-9 flex flex-col sm:flex-row items-center gap-3">
             <a
-              href="#contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-5 py-3 text-sm font-medium hover:bg-foreground/90 transition"
+  href="https://calendly.com/pawel-kuchcik11/30min"
+  target="_blank"
+  rel="noopener noreferrer"
             >
               Book Strategy Call
               <ArrowRight className="size-4 group-hover:translate-x-0.5 transition" />
