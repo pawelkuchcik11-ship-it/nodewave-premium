@@ -93,7 +93,9 @@ function Nav() {
             ))}
           </nav>
           <a
-            href="#contact"
+            href="https://calendly.com/pawel-kuchcik11/30min"
+target="_blank"
+rel="noopener noreferrer"
             className="group inline-flex items-center gap-1.5 rounded-full bg-foreground text-background px-4 py-2 text-sm font-medium hover:bg-foreground/90 transition"
           >
             Book Strategy Call
@@ -147,14 +149,12 @@ function Hero() {
               <ArrowRight className="size-4 group-hover:translate-x-0.5 transition" />
             </a>
             <a
-              href="https://calendly.com/pawel-kuchcik11/30min"
-target="_blank"
-rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full border hairline bg-surface/40 px-5 py-3 text-sm font-medium hover:bg-surface transition"
-            >
-              Get Free Audit
-              <ArrowUpRight className="size-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition" />
-            </a>
+  href="#contact"
+  className="group inline-flex items-center gap-2 rounded-full border hairline bg-surface/40 px-5 py-3 text-sm font-medium hover:bg-surface transition"
+>
+  Get Free Audit
+  <ArrowUpRight className="size-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition" />
+</a>
           </div>
         </div>
 
@@ -784,19 +784,19 @@ function FinalCTA() {
         </p>
         <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3">
           <a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-full bg-foreground text-background px-5 py-3 text-sm font-medium hover:bg-foreground/90 transition"
-          >
-            Book Free Consultation <ArrowRight className="size-4" />
-          </a>
+  href="https://calendly.com/pawel-kuchcik11/30min"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-2 rounded-full bg-foreground text-background px-5 py-3 text-sm font-medium hover:bg-foreground/90 transition"
+>
+  Book Free Consultation <ArrowRight className="size-4" />
+</a>
           <a
-            href="https://calendly.com/pawel-kuchcik11/30min"
-target="_blank"
-rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border hairline bg-surface/40 px-5 py-3 text-sm font-medium hover:bg-surface transition"
-          >
-            Get Free Audit <ArrowUpRight className="size-4" />
-          </a>
+  href="#contact"
+  className="inline-flex items-center gap-2 rounded-full border hairline bg-surface/40 px-5 py-3 text-sm font-medium hover:bg-surface transition"
+>
+  Get Free Audit <ArrowUpRight className="size-4" />
+</a>
         </div>
       </div>
     </section>
