@@ -64,6 +64,7 @@ function Landing() {
       <Benefits />
       <Testimonials />
       <FAQ />
+      <AuditGenerator />
       <FinalCTA />
       <ContactForm />
       <Footer />
@@ -800,6 +801,87 @@ function FinalCTA() {
   Get Free Audit <ArrowUpRight className="size-4" />
 </a>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function AuditGenerator() {
+  const [sent, setSent] = useState(false);
+
+  return (
+    <section id="audit" className="py-24 bg-surface/30 border-y hairline">
+      <div className="mx-auto max-w-5xl px-4 grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-10">
+        <div>
+          <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            Free AI Audit
+          </div>
+          <h3 className="mt-4 font-display text-4xl md:text-5xl leading-[1.05]">
+            Get a free AI automation audit for your business.
+          </h3>
+          <p className="mt-5 text-muted-foreground">
+            Tell us what slows your team down. Our AI will analyze your workflow and suggest where automation can save time, improve response speed and increase conversions.
+          </p>
+        </div>
+
+        <form
+          onSubmit={async (e) => {
+            e.preventDefault();
+
+            const form = e.currentTarget;
+            const formData = new FormData(form);
+
+            const data = {
+              email: formData.get("email"),
+              website: formData.get("website"),
+              industry: formData.get("industry"),
+              bottleneck: formData.get("bottleneck"),
+              source: "ai-audit-form",
+            };
+
+            await fetch("https://mysaveplace.app.n8n.cloud/webhook/ai-audit", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            });
+
+            setSent(true);
+            form.reset();
+          }}
+          className="glass rounded-2xl p-6 md:p-8 space-y-4"
+        >
+          <Field label="Email" name="email" type="email" placeholder="you@company.com" />
+          <Field label="Website URL" name="website" placeholder="https://yourcompany.com" />
+          <Field label="Industry" name="industry" placeholder="Dental clinic, gym, real estate..." />
+
+          <div>
+            <label className="text-xs text-muted-foreground">Biggest bottleneck</label>
+            <textarea
+              name="bottleneck"
+              required
+              rows={4}
+              placeholder="What repetitive task or problem would you like to automate?"
+              className="mt-1.5 w-full rounded-lg border hairline bg-background/60 px-3 py-2.5 text-sm placeholder:text-muted-foreground/60 focus:outline-none focus:ring-1 focus:ring-foreground/40 resize-none"
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-foreground text-background px-5 py-3 text-sm font-medium hover:bg-foreground/90 transition"
+          >
+            {sent ? (
+              <>
+                <Check className="size-4" /> Audit request sent
+              </>
+            ) : (
+              <>
+                Generate Free Audit <Sparkles className="size-4" />
+              </>
+            )}
+          </button>
+        </form>
       </div>
     </section>
   );
