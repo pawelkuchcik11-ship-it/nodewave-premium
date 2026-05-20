@@ -69,36 +69,28 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
-  meta: [
-    { charSet: "utf-8" },
-    { name: "viewport", content: "width=device-width, initial-scale=1" },
-
-    { title: "Nodewave — AI Automation Systems for Local Businesses" },
-
-    {
-      name: "description",
-      content:
-        "Nodewave builds AI automation systems that capture leads, qualify prospects, send follow-ups and organize customer communication automatically.",
-    },
-
-    { name: "author", content: "Nodewave" },
-
-    {
-      property: "og:title",
-      content: "Nodewave — AI Automation Systems for Local Businesses",
-    },
-
-    {
-      property: "og:description",
-      content:
-        "Nodewave builds AI automation systems that capture leads, qualify prospects, send follow-ups and organize customer communication automatically.",
-    },
-
-    { property: "og:type", content: "website" },
-
-    { name: "twitter:card", content: "summary_large_image" },
-  ],
-})
+    meta: [
+      { charSet: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { title: "Nodewave — AI Automation Systems for Local Businesses" },
+      {
+        name: "description",
+        content:
+          "Nodewave builds AI automation systems that capture leads, qualify prospects, send follow-ups and organize customer communication automatically.",
+      },
+      { name: "author", content: "Nodewave" },
+      {
+        property: "og:title",
+        content: "Nodewave — AI Automation Systems for Local Businesses",
+      },
+      {
+        property: "og:description",
+        content:
+          "Nodewave builds AI automation systems that capture leads, qualify prospects, send follow-ups and organize customer communication automatically.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -120,17 +112,17 @@ function RootShell({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <script
-  type="text/javascript"
-  dangerouslySetInnerHTML={{
-    __html: `
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "wu5as0paia");
-    `,
-  }}
-/>
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "wu5as0paia");
+            `,
+          }}
+        />
         <HeadContent />
       </head>
       <body>

@@ -29,6 +29,8 @@ import {
   Activity,
 } from "lucide-react";
 
+declare const clarity: any;
+
 export const Route = createFileRoute("/")({
   component: Landing,
   head: () => ({
