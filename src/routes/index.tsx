@@ -141,12 +141,15 @@ function Hero() {
   href="https://calendly.com/pawel-kuchcik11/30min"
   target="_blank"
   rel="noopener noreferrer"
-            >
+  className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-5 py-3 text-sm font-medium hover:bg-foreground/90 transition"
+>
               Book Strategy Call
               <ArrowRight className="size-4 group-hover:translate-x-0.5 transition" />
             </a>
             <a
-              href="#contact"
+              href="https://calendly.com/pawel-kuchcik11/30min"
+target="_blank"
+rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full border hairline bg-surface/40 px-5 py-3 text-sm font-medium hover:bg-surface transition"
             >
               Get Free Audit
@@ -787,7 +790,9 @@ function FinalCTA() {
             Book Free Consultation <ArrowRight className="size-4" />
           </a>
           <a
-            href="#contact"
+            href="https://calendly.com/pawel-kuchcik11/30min"
+target="_blank"
+rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border hairline bg-surface/40 px-5 py-3 text-sm font-medium hover:bg-surface transition"
           >
             Get Free Audit <ArrowUpRight className="size-4" />
@@ -877,7 +882,7 @@ function ContactForm() {
               </>
             ) : (
               <>
-                Book Strategy Call <ArrowRight className="size-4" />
+                Send Free Audit Request <ArrowRight className="size-4" />
               </>
             )}
           </button>
