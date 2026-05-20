@@ -66,7 +66,6 @@ function Landing() {
       <FAQ />
       <AuditGenerator />
       <FinalCTA />
-      <ContactForm />
       <Footer />
     </main>
   );
